@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "ue4sslinux-profile/v1",
+  "name": "dune",
+  "displayName": "Dune: Awakening",
+  "ueVersionHint": "5.x",
+  "safeLaunchMode": "read-only-first",
+  "processFilters": {
+    "linuxClient": ["DuneSandbox-Linux-Shipping", "DuneSandbox"],
+    "linuxServer": ["DuneSandboxServer-Linux-Shipping", "DuneSandboxServer"],
+    "windows": ["DuneSandbox-Win64-Shipping.exe"]
+  },
+  "scanPresets": ["building", "brt", "deep-desert", "gm", "cheat", "ue"],
+  "windowsProxyDllCandidates": ["version.dll", "winmm.dll", "dxgi.dll"],
+  "defaultWindowsProxyDll": "version.dll",
+  "caveats": [
+    "The version.dll Proton override is the known working client proxy path.",
+    "Use server-side changes by default; client-file staging should stay manifest-backed and reversible."
+  ]
+}

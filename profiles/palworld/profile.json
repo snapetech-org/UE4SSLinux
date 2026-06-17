@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "ue4sslinux-profile/v1",
+  "name": "palworld",
+  "displayName": "Palworld",
+  "ueVersionHint": "5.x",
+  "safeLaunchMode": "read-only-first",
+  "processFilters": {
+    "linuxServer": ["PalServer-Linux-Test", "PalServer"],
+    "windows": ["Palworld-Win64-Shipping.exe", "PalServer-Win64-Shipping.exe"]
+  },
+  "scanPresets": ["ue"],
+  "windowsProxyDllCandidates": ["version.dll", "winmm.dll", "dxgi.dll", "xinput1_3.dll"],
+  "defaultWindowsProxyDll": "version.dll",
+  "caveats": [
+    "Native Linux servers generally cannot load existing UE4SS DLL mods directly.",
+    "Windows targets under Wine/Proton are the practical path for existing UE4SS mods until native parity lands."
+  ]
+}
